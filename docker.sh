@@ -36,5 +36,5 @@ sudo docker version
 sudo docker info
 
 echo "=== Добавление пользователя в группу docker ==="
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 echo "=== Установка завершена. Для применения группы docker — выйди и зайди в систему снова ==="
