@@ -13,10 +13,10 @@ sudo apt install -y \
     lsb-release
 
 echo "=== Добавление Docker GPG ключа ==="
-sudo mkdir -p /etc/apt/keyrings
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
-  | sudo gpg --batch --yes --dearmor -o /etc/apt/keyrings/docker.gpg
+  | sudo gpg --dearmor -o /tmp/docker.gpg
+sudo mv -f /tmp/docker.gpg /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
 echo "=== Добавление Docker репозитория ==="
